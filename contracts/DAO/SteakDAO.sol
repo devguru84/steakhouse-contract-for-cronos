@@ -13,8 +13,11 @@ contract SteakDAO is ERC721Enumerable, Ownable {
     uint256 public Wlcost = 1 ether;
     uint256 constant public maxSupply = 200;
     uint256 public maxMintAmount = 5;
+
     mapping(address => uint256) public mintPerWallet;
+
     bool public paused = false;
+
     mapping(address => bool) public whitelisted;
     
     address public daoWallet = 0x7A0b8D56DDBAa1B4b2B51B634714348897108792;
